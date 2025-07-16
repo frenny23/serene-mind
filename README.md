@@ -54,6 +54,7 @@ This project is built with:
 - React
 - shadcn-ui
 - Tailwind CSS
+- Google Gemini API
 
 
 Yes it is!
