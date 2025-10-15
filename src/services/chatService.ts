@@ -6,7 +6,7 @@ interface APIMessage {
 export const sendMessage = async (messages: APIMessage[]): Promise<string> => {
   const myHeaders = new Headers();
   myHeaders.append("Content-Type", "application/json");
-  myHeaders.append("X-goog-api-key", "AIzaSyAQsPTLgOtQw9oSaX4LrYweHNxliUc3UQA");
+  myHeaders.append("X-goog-api-key", import.meta.env.example.VITE_GEMINI_API_KEY);
 
   // Format the conversation history correctly
   const formattedMessages = messages.map(msg => ({
@@ -27,7 +27,7 @@ export const sendMessage = async (messages: APIMessage[]): Promise<string> => {
 
   try {
     const response = await fetch(
-      "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent",
+      "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent",
       requestOptions
     );
 
