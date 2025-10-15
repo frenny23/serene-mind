@@ -6,7 +6,7 @@ interface APIMessage {
 export const sendMessage = async (messages: APIMessage[]): Promise<string> => {
   const myHeaders = new Headers();
   myHeaders.append("Content-Type", "application/json");
-  myHeaders.append("X-goog-api-key", "AIzaSyBqdaZNQFpE3vwXXfvWDfnSoTRzk-J8rHY");
+  myHeaders.append("X-goog-api-key", "AIzaSyAQsPTLgOtQw9oSaX4LrYweHNxliUc3UQA");
 
   // Format the conversation history correctly
   const formattedMessages = messages.map(msg => ({
